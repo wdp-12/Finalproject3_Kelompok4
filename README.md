@@ -1,4 +1,4 @@
-# Finalproject3_Kelompok4
+# Final Project 3 | Parallax Website 
 Kelompok 4 :
 - Annisa Maulida
 - Iklima Azizah Jannah
