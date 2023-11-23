@@ -178,3 +178,7 @@ body {
 	object-fit: cover;
 	object-position: center;
   }
+
+  .carousel-image:hover {
+    transform: scale(1.2);
+  }
