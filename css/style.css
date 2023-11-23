@@ -12,6 +12,7 @@ body {
 	background-color: #8B4513;
 	font-family: raleway_f, sans-serif;
 	line-height: 1.55;
+	height: 100vh;
 }
 .main-header {
 	position: relative;
@@ -135,8 +136,45 @@ body {
 }
 
 .main-article__content p {
-    text-align: justify; /* Jika ingin paragraf rata kiri dan kanan */
-    max-width: 800px; /* Atur lebar maksimum sesuai kebutuhan */
-    margin: 0 auto; /* Membuat paragraf menjadi tengah */
+    text-align: justify; 
+    max-width: 800px; 
+    margin: 0 auto; 
 }
 
+.centered-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+	margin-top: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel{
+	margin-top: 300px !important;
+
+}
+.carousel-track {
+	position: absolute;
+	left: -50;
+	top: 0%;
+	transform: translate(0,-50%);
+	display: flex;
+	gap: 2vmin;
+	padding: 2vmin;
+	cursor: grab;
+  }
+  
+  .carousel-track.grabbing { cursor: grabbing; }
+  
+  .carousel-image {
+	width: 40vmin;
+	height: 60vmin;
+	object-fit: cover;
+	object-position: center;
+  }
