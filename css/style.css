@@ -127,6 +127,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     top: 0;
+	margin-bottom: 20px;
 }
 
 .main-article__content {
@@ -138,6 +139,4 @@ body {
     max-width: 800px; /* Atur lebar maksimum sesuai kebutuhan */
     margin: 0 auto; /* Membuat paragraf menjadi tengah */
 }
-
-
 
