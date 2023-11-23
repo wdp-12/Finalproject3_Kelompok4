@@ -1,6 +1,6 @@
 # Final Project 3 | Parallax Website 
 Kelompok 4 :
-- Annisa Maulida
+- Annisa Maulida Rahma
 - Iklima Azizah Jannah
 - Azimatu Al Munawwaroh
 - Rasyid Akbar
