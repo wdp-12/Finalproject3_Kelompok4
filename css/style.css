@@ -152,6 +152,113 @@ article .main-article__content {
     object-position: center;
 }
 
+
+/* BIOGRAPHY */
+.biography {
+    position: relative;
+    width: 100vw;
+    height: 900px;
+    background-image: url(../assets/img/gallery2.jpg);
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center -400px;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-bottom: 50px;
+
+}
+
+.biography .bio-title {
+    position: relative;
+    height: 20%;
+    width: 100vw;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.biography .bio-title h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: calc(var(--index) * 2);
+    letter-spacing: calc(var(--index) / 4.5);
+    will-change: transform;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+
+.biography .bio-content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    width: 100vw;
+    height: 65%;
+    bottom: -85%;
+    gap: calc(var(--index) * 2.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-content .cards {
+    height: 85%;
+    width: 25%;
+    background-color: #fff6e8;
+    filter: drop-shadow(3px 3px 5px rgba(255, 245, 229, 0.3));
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.bio-content .card-image {
+    height: 55%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    object-fit: cover;
+}
+
+.bio-content .card-description {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    position: relative;
+    background-color: #fff6e8;
+    bottom: 0;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1.2rem;
+}
+
+.bio-content .text-title {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.bio-content .text-body {
+    margin-top: -7px;
+    font-size: 1em;
+    line-height: 150%;
+    text-align: justify;
+}
+
+.bio-content .cards:hover .card-description {
+    transform: translateY(100%);
+}
+
+.bio-content .cards:hover .card-image {
+    height: 100%;
+    transform: scale(1.2);
+}
+
+/* Loaading */
 .loading-overlay {
     display: flex;
     flex-direction: column;
@@ -162,7 +269,8 @@ article .main-article__content {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 1.3); /* Setel warna latar belakang dengan opasitas */
+    background-color: rgba(255, 255, 255, 1.3);
+    /* Setel warna latar belakang dengan opasitas */
     z-index: 1000;
 }
 
@@ -184,10 +292,10 @@ article .main-article__content {
     left: 0;
     bottom: 0;
     right: 0;
-  }
-  
-  /* Transparent Overlay */
-  .loading:before {
+}
+
+/* Transparent Overlay */
+.loading:before {
     content: '';
     display: block;
     position: fixed;
@@ -195,20 +303,20 @@ article .main-article__content {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
-  }
-  
-  /* :not(:required) hides these rules from IE9 and below */
-  .loading:not(:required) {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
     /* hide "loading..." text */
     font: 0/0 a;
     color: transparent;
     text-shadow: none;
     background-color: transparent;
     border: 0;
-  }
-  
-  .loading:not(:required):after {
+}
+
+.loading:not(:required):after {
     content: '';
     display: block;
     font-size: 10px;
@@ -223,76 +331,83 @@ article .main-article__content {
     border-radius: 0.5em;
     -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
     box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
-  }
-  
-  /* Animation */
-  
-  @-webkit-keyframes spinner {
-    0% {
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @-moz-keyframes spinner {
-    0% {
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @-o-keyframes spinner {
-    0% {
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes spinner {
-    0% {
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
+}
 
-  .parallax-container {
+/* Animation */
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.parallax-container {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -300,11 +415,10 @@ article .main-article__content {
 }
 
 .parallax-image {
-    margin-top: 200px !important;
+    margin-top: 250px !important;
     width: 90%;
     height: 80%;
-    background-image: url(../assets/img/kuda.png); 
+    background-image: url(../assets/img/kuda.png);
     transform: translateY(0);
     transition: transform 0.1s ease-out;
 }
-  
