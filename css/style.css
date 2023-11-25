@@ -291,3 +291,20 @@ article .main-article__content {
       transform: rotate(360deg);
     }
   }
+
+  .parallax-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-image {
+    margin-top: 200px !important;
+    width: 90%;
+    height: 80%;
+    background-image: url(../assets/img/kuda.png); 
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+  
