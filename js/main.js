@@ -2,6 +2,7 @@
 const heroSocrates = document.querySelector(".hero__socrates");
 const heroMoon = document.querySelector(".hero__moon");
 const heroContent = document.querySelector(".hero__content");
+const bioContent = document.querySelector(".biography .bio-content");
 
 window.addEventListener('scroll', function (e) {
     heroMoon.style.transform = `translateY(${this.scrollY / 1.35}px)`;
@@ -9,6 +10,8 @@ window.addEventListener('scroll', function (e) {
     heroContent.style.transform = `translateY(${(this.scrollY / 2)}px)`;
 
     heroSocrates.style.transform = `translateY(-${this.scrollY / 5}px)`;
+
+    bioContent.style.transform = `translateY(-${this.scrollY / 2}px)`;
 });
 
 
@@ -59,7 +62,7 @@ const parallaxImage = document.querySelector('.parallax-image');
 
 let lastScrollTop = 0;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrollTop = window.scrollY;
 
     if (scrollTop > lastScrollTop) {
