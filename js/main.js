@@ -53,3 +53,23 @@ setTimeout(() => {
     document.querySelector('.layers__caption').classList.add('animate__animated', 'animate__heartBeat');
     document.querySelector('.layers__title').classList.add('animate__animated', 'animate__hinge');
 }, 5000);
+
+const parallaxContainer = document.querySelector('.parallax-container');
+const parallaxImage = document.querySelector('.parallax-image');
+
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > lastScrollTop) {
+        // Scroll ke bawah
+        parallaxImage.style.transform = `translateX(-${scrollTop * 0.4}px)`;
+    } else {
+        // Scroll ke atas
+        parallaxImage.style.transform = `translateX(${scrollTop * 0.6}px)`;
+    }
+
+    lastScrollTop = scrollTop;
+});
+
