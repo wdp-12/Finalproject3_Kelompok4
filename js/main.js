@@ -45,3 +45,11 @@ function end() {
 track.addEventListener('pointerdown', start, false);
 track.addEventListener('pointermove', move, false);
 track.addEventListener('pointerup', end, false);
+
+document.querySelector('.loading-overlay').style.display = 'flex';
+
+setTimeout(() => {
+    document.querySelector('.loading-overlay').style.display = 'none';
+    document.querySelector('.layers__caption').classList.add('animate__animated', 'animate__heartBeat');
+    document.querySelector('.layers__title').classList.add('animate__animated', 'animate__hinge');
+}, 5000);
